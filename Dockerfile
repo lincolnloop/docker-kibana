@@ -10,7 +10,7 @@ RUN curl -sO https://download.elastic.co/kibana/kibana/kibana-${KIBANA_VERSION}-
 RUN echo "${SHA1_SUM}  kibana-${KIBANA_VERSION}-amd64.deb" > kibana.sha1 && sha1sum --check kibana.sha1
 RUN dpkg -i kibana-${KIBANA_VERSION}-amd64.deb && rm kibana-${KIBANA_VERSION}-amd64.deb
 
-ADD ./run.sh /run.sh
+ADD run.sh /run.sh
 
 EXPOSE 5601
 
